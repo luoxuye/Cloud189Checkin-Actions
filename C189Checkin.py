@@ -45,6 +45,11 @@ def checkin():
     try:
         if response.json()['isSign'] == "false":
             print(f"未签到，签到获得{netdiskBonus}M空间")
+            text = "天翼云签到成功!"
+            pushMessage({
+                "text": text
+            })
+            
         else:
             print(f"已经签到过了，签到获得{netdiskBonus}M空间")
     except Exception as e:
