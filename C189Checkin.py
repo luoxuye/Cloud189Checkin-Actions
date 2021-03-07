@@ -50,6 +50,8 @@ def checkin():
             
         else:
             print(f"已经签到过了，签到获得{netdiskBonus}M空间")
+            massagetext2 = "天翼云签到成功!"
+            pushMessage(massagetext2)
     except Exception as e:
         text = "解析签到消息失败!"
         pushMessage({
