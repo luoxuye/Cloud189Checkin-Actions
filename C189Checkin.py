@@ -46,8 +46,8 @@ def checkin():
         if response.json()['isSign'] == "false":
             print(f"未签到，签到获得{netdiskBonus}M空间")
             pushMessage({
-                "text": "天翼云!",
-                "desp": "签到成功!"
+                "text": f"天翼云签到获得{netdiskBonus}M空间",
+                "desp": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             })
             
         else:
