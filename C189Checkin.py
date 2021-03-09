@@ -51,13 +51,8 @@ def checkin():
             })
             
         else:
-            print(f"已经签到过了，签到获得{netdiskBonus}M空间")
-            pushMessage({
-                "text": f"天翼云签到获得{netdiskBonus}M空间",
-                "desp": time.strftime("%Y-%m-%d %H:%M:%S")
-            })
-
-            
+            print(f"已经签到过了，签到获得{netdiskBonus}M空间") 
+    
     except Exception as e:
         text = "解析签到消息失败!"
         pushMessage({
